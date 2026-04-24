@@ -1,3 +1,5 @@
+package co.edu.univalle.vivaeventosuserservice.application.dto;
+
 import lombok.Getter;
 import lombok.Setter;
 

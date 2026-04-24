@@ -2,6 +2,7 @@ package co.edu.univalle.vivaeventosuserservice.application.usecase;
 
 import co.edu.univalle.vivaeventosuserservice.domain.model.User;
 import co.edu.univalle.vivaeventosuserservice.application.dto.RegisterUserDTO;
+import co.edu.univalle.vivaeventosuserservice.infrastructure.persistence.UserEntity;
 import co.edu.univalle.vivaeventosuserservice.infrastructure.persistence.UserJpaRepository;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -31,7 +32,6 @@ public class RegisterUser {
         user.setEmail(request.getEmail());
         user.setPassword(hashedPassword);
 
-        // Map User to UserEntity for persistence
         UserEntity userEntity = new UserEntity();
         userEntity.setName(user.getName());
         userEntity.setEmail(user.getEmail());
