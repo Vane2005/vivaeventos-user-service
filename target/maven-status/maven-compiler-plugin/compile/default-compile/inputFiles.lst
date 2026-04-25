@@ -1,0 +1,9 @@
+C:\Users\Equipo\Desktop\Proyectos\Desarrollo 3\Proyecto\vivaeventos-user-service\src\main\java\co\edu\univalle\vivaeventosuserservice\application\dto\RegisterUserDTO.java
+C:\Users\Equipo\Desktop\Proyectos\Desarrollo 3\Proyecto\vivaeventos-user-service\src\main\java\co\edu\univalle\vivaeventosuserservice\application\usecase\RegisterUser.java
+C:\Users\Equipo\Desktop\Proyectos\Desarrollo 3\Proyecto\vivaeventos-user-service\src\main\java\co\edu\univalle\vivaeventosuserservice\domain\model\User.java
+C:\Users\Equipo\Desktop\Proyectos\Desarrollo 3\Proyecto\vivaeventos-user-service\src\main\java\co\edu\univalle\vivaeventosuserservice\domain\port\UserRepository.java
+C:\Users\Equipo\Desktop\Proyectos\Desarrollo 3\Proyecto\vivaeventos-user-service\src\main\java\co\edu\univalle\vivaeventosuserservice\infrastructure\persistence\UserEntity.java
+C:\Users\Equipo\Desktop\Proyectos\Desarrollo 3\Proyecto\vivaeventos-user-service\src\main\java\co\edu\univalle\vivaeventosuserservice\infrastructure\persistence\UserJpaRepository.java
+C:\Users\Equipo\Desktop\Proyectos\Desarrollo 3\Proyecto\vivaeventos-user-service\src\main\java\co\edu\univalle\vivaeventosuserservice\infrastructure\security\SecurityConfig.java
+C:\Users\Equipo\Desktop\Proyectos\Desarrollo 3\Proyecto\vivaeventos-user-service\src\main\java\co\edu\univalle\vivaeventosuserservice\infrastructure\web\UserController.java
+C:\Users\Equipo\Desktop\Proyectos\Desarrollo 3\Proyecto\vivaeventos-user-service\src\main\java\co\edu\univalle\vivaeventosuserservice\VivaeventosUserServiceApplication.java
