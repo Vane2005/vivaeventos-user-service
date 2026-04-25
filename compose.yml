@@ -3,12 +3,12 @@ version: "latest"
 services:
   postgres:
     image: postgres:15
-    container_name: vivaeventosDB
+    container_name: user-service-db
     restart: always
     environment:
-      POSTGRES_DB: vivaeventosDB
+      POSTGRES_DB: user-db
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
+      POSTGRES_PASSWORD: 1234
     ports:
       - "5433:5432"
     volumes:
