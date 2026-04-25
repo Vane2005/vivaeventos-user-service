@@ -1,9 +1,15 @@
 co\edu\univalle\vivaeventosuserservice\infrastructure\persistence\UserEntity.class
-co\edu\univalle\vivaeventosuserservice\infrastructure\persistence\UserJpaRepository.class
+co\edu\univalle\vivaeventosuserservice\infrastructure\web\AuthController.class
 co\edu\univalle\vivaeventosuserservice\infrastructure\web\UserController.class
+co\edu\univalle\vivaeventosuserservice\infrastructure\persistence\UserRepositoryAdapter.class
+co\edu\univalle\vivaeventosuserservice\application\dto\LoginRequest.class
 co\edu\univalle\vivaeventosuserservice\infrastructure\security\SecurityConfig.class
 co\edu\univalle\vivaeventosuserservice\VivaeventosUserServiceApplication.class
+co\edu\univalle\vivaeventosuserservice\application\dto\LoginResponse.class
 co\edu\univalle\vivaeventosuserservice\domain\port\UserRepository.class
+co\edu\univalle\vivaeventosuserservice\application\usecase\LoginUser.class
+co\edu\univalle\vivaeventosuserservice\infrastructure\persistence\UserJpaRepository.class
+co\edu\univalle\vivaeventosuserservice\infrastructure\security\JwtService.class
 co\edu\univalle\vivaeventosuserservice\application\usecase\RegisterUser.class
 co\edu\univalle\vivaeventosuserservice\application\dto\RegisterUserDTO.class
 co\edu\univalle\vivaeventosuserservice\domain\model\User.class
