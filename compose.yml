@@ -1,4 +1,17 @@
 services:
+  user-service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: vivaeventos-user-service
+    ports:
+      - "8080:8080"
+    env_file: # Carga el .env
+      - .env
+    depends_on:
+      - postgres
+    restart: always
+
   postgres:
     image: postgres:15
     container_name: user-service-db
@@ -14,3 +27,4 @@ services:
 
 volumes:
   postgres_data:
+

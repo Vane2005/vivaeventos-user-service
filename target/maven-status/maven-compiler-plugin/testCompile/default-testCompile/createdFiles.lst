@@ -1,1 +1,4 @@
-co\edu\univalle\vivaeventosuserservice\VivaeventosUserServiceApplicationTests.class
+co/edu/univalle/vivaeventosuserservice/infrastructure/security/JwtServiceTest.class
+co/edu/univalle/vivaeventosuserservice/VivaeventosUserServiceApplicationTests.class
+co/edu/univalle/vivaeventosuserservice/application/usecase/RegisterUserTest.class
+co/edu/univalle/vivaeventosuserservice/application/usecase/LoginUserTest.class

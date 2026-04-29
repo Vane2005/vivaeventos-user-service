@@ -67,6 +67,21 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
-*.idea
+
+# IDE files
+.idea/
+*.iml
+
+# Maven wrapper files
+.mvn/repository/
+
+# Spring Boot application properties (contains secrets)
+src/main/resources/application.properties
+
+# Environment variables file (for secrets)
+.env
+
+# Build artifacts
+target/
 
 # End of https://www.toptal.com/developers/gitignore/api/java,linux,windows
