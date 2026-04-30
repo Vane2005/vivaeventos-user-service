@@ -2,8 +2,11 @@
 /home/vanessa-mona/UNIVERSIDAD/7 SEMESTRE/Desarrollo 3/Proyecto/repositorios/vivaeventos-user-service/src/main/java/co/edu/univalle/vivaeventosuserservice/application/dto/LoginRequest.java
 /home/vanessa-mona/UNIVERSIDAD/7 SEMESTRE/Desarrollo 3/Proyecto/repositorios/vivaeventos-user-service/src/main/java/co/edu/univalle/vivaeventosuserservice/application/dto/LoginResponse.java
 /home/vanessa-mona/UNIVERSIDAD/7 SEMESTRE/Desarrollo 3/Proyecto/repositorios/vivaeventos-user-service/src/main/java/co/edu/univalle/vivaeventosuserservice/application/dto/RegisterUserDTO.java
+/home/vanessa-mona/UNIVERSIDAD/7 SEMESTRE/Desarrollo 3/Proyecto/repositorios/vivaeventos-user-service/src/main/java/co/edu/univalle/vivaeventosuserservice/application/dto/TicketSelectionDTO.java
+/home/vanessa-mona/UNIVERSIDAD/7 SEMESTRE/Desarrollo 3/Proyecto/repositorios/vivaeventos-user-service/src/main/java/co/edu/univalle/vivaeventosuserservice/application/dto/TicketSelectionResponseDTO.java
 /home/vanessa-mona/UNIVERSIDAD/7 SEMESTRE/Desarrollo 3/Proyecto/repositorios/vivaeventos-user-service/src/main/java/co/edu/univalle/vivaeventosuserservice/application/usecase/LoginUser.java
 /home/vanessa-mona/UNIVERSIDAD/7 SEMESTRE/Desarrollo 3/Proyecto/repositorios/vivaeventos-user-service/src/main/java/co/edu/univalle/vivaeventosuserservice/application/usecase/RegisterUser.java
+/home/vanessa-mona/UNIVERSIDAD/7 SEMESTRE/Desarrollo 3/Proyecto/repositorios/vivaeventos-user-service/src/main/java/co/edu/univalle/vivaeventosuserservice/application/usecase/SelectTickets.java
 /home/vanessa-mona/UNIVERSIDAD/7 SEMESTRE/Desarrollo 3/Proyecto/repositorios/vivaeventos-user-service/src/main/java/co/edu/univalle/vivaeventosuserservice/domain/model/User.java
 /home/vanessa-mona/UNIVERSIDAD/7 SEMESTRE/Desarrollo 3/Proyecto/repositorios/vivaeventos-user-service/src/main/java/co/edu/univalle/vivaeventosuserservice/domain/port/UserRepository.java
 /home/vanessa-mona/UNIVERSIDAD/7 SEMESTRE/Desarrollo 3/Proyecto/repositorios/vivaeventos-user-service/src/main/java/co/edu/univalle/vivaeventosuserservice/infrastructure/persistence/UserEntity.java
@@ -12,4 +15,5 @@
 /home/vanessa-mona/UNIVERSIDAD/7 SEMESTRE/Desarrollo 3/Proyecto/repositorios/vivaeventos-user-service/src/main/java/co/edu/univalle/vivaeventosuserservice/infrastructure/security/JwtService.java
 /home/vanessa-mona/UNIVERSIDAD/7 SEMESTRE/Desarrollo 3/Proyecto/repositorios/vivaeventos-user-service/src/main/java/co/edu/univalle/vivaeventosuserservice/infrastructure/security/SecurityConfig.java
 /home/vanessa-mona/UNIVERSIDAD/7 SEMESTRE/Desarrollo 3/Proyecto/repositorios/vivaeventos-user-service/src/main/java/co/edu/univalle/vivaeventosuserservice/infrastructure/web/AuthController.java
+/home/vanessa-mona/UNIVERSIDAD/7 SEMESTRE/Desarrollo 3/Proyecto/repositorios/vivaeventos-user-service/src/main/java/co/edu/univalle/vivaeventosuserservice/infrastructure/web/TicketController.java
 /home/vanessa-mona/UNIVERSIDAD/7 SEMESTRE/Desarrollo 3/Proyecto/repositorios/vivaeventos-user-service/src/main/java/co/edu/univalle/vivaeventosuserservice/infrastructure/web/UserController.java
