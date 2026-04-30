@@ -1,4 +1,6 @@
 /home/vanessa-mona/UNIVERSIDAD/7 SEMESTRE/Desarrollo 3/Proyecto/repositorios/vivaeventos-user-service/src/test/java/co/edu/univalle/vivaeventosuserservice/VivaeventosUserServiceApplicationTests.java
 /home/vanessa-mona/UNIVERSIDAD/7 SEMESTRE/Desarrollo 3/Proyecto/repositorios/vivaeventos-user-service/src/test/java/co/edu/univalle/vivaeventosuserservice/application/usecase/LoginUserTest.java
 /home/vanessa-mona/UNIVERSIDAD/7 SEMESTRE/Desarrollo 3/Proyecto/repositorios/vivaeventos-user-service/src/test/java/co/edu/univalle/vivaeventosuserservice/application/usecase/RegisterUserTest.java
+/home/vanessa-mona/UNIVERSIDAD/7 SEMESTRE/Desarrollo 3/Proyecto/repositorios/vivaeventos-user-service/src/test/java/co/edu/univalle/vivaeventosuserservice/application/usecase/SelectTicketsTest.java
 /home/vanessa-mona/UNIVERSIDAD/7 SEMESTRE/Desarrollo 3/Proyecto/repositorios/vivaeventos-user-service/src/test/java/co/edu/univalle/vivaeventosuserservice/infrastructure/security/JwtServiceTest.java
+/home/vanessa-mona/UNIVERSIDAD/7 SEMESTRE/Desarrollo 3/Proyecto/repositorios/vivaeventos-user-service/src/test/java/co/edu/univalle/vivaeventosuserservice/infrastructure/web/TicketControllerTest.java

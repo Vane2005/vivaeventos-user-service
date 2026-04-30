@@ -2,3 +2,5 @@ co/edu/univalle/vivaeventosuserservice/infrastructure/security/JwtServiceTest.cl
 co/edu/univalle/vivaeventosuserservice/VivaeventosUserServiceApplicationTests.class
 co/edu/univalle/vivaeventosuserservice/application/usecase/RegisterUserTest.class
 co/edu/univalle/vivaeventosuserservice/application/usecase/LoginUserTest.class
+co/edu/univalle/vivaeventosuserservice/application/usecase/SelectTicketsTest.class
+co/edu/univalle/vivaeventosuserservice/infrastructure/web/TicketControllerTest.class
