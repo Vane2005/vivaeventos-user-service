@@ -1,6 +1,7 @@
 package co.edu.univalle.vivaeventosuserservice.application.usecase;
 
 import co.edu.univalle.vivaeventosuserservice.application.dto.LoginRequest;
+import co.edu.univalle.vivaeventosuserservice.application.dto.LoginResponse;
 import co.edu.univalle.vivaeventosuserservice.domain.model.User;
 import co.edu.univalle.vivaeventosuserservice.domain.port.UserRepository;
 import co.edu.univalle.vivaeventosuserservice.infrastructure.security.JwtService;
@@ -12,8 +13,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 
 import java.util.Optional;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 class LoginUserTest {
@@ -43,6 +43,7 @@ class LoginUserTest {
         request.setPassword("password123");
 
         User user = new User();
+        user.setId(1L);
         user.setEmail("john@example.com");
         user.setPassword("hashedPassword");
 
@@ -51,10 +52,11 @@ class LoginUserTest {
         when(jwtService.generateToken(user.getEmail())).thenReturn("mockedToken");
 
         // Act
-        String token = loginUser.execute(request);
+        LoginResponse response = loginUser.execute(request);
 
         // Assert
-        assertEquals("mockedToken", token);
+        assertNotNull(response.getToken());
+        assertEquals(1L, response.getUserId());
         verify(userRepository, times(1)).findByEmail(request.getEmail());
         verify(passwordEncoder, times(1)).matches(request.getPassword(), user.getPassword());
         verify(jwtService, times(1)).generateToken(user.getEmail());
