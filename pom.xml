@@ -184,6 +184,7 @@
                                 <exclude>**/model/**</exclude>
                                 <exclude>**/persistence/**</exclude>
                                 <exclude>**/service/**</exclude>
+                                <exclude>**/security/**</exclude>
                                 <exclude>**/*Application.class</exclude>
                             </excludes>
                         </configuration>
