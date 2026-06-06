@@ -1,6 +1,7 @@
 package co.edu.univalle.vivaeventosuserservice.application.usecase;
 
 import co.edu.univalle.vivaeventosuserservice.application.dto.RegisterUserDTO;
+import co.edu.univalle.vivaeventosuserservice.domain.model.Role;
 import co.edu.univalle.vivaeventosuserservice.domain.model.User;
 import co.edu.univalle.vivaeventosuserservice.domain.port.UserRepository;
 import org.junit.jupiter.api.BeforeEach;
@@ -63,5 +64,41 @@ class RegisterUserTest {
         RuntimeException exception = assertThrows(RuntimeException.class, () -> registerUser.execute(request));
         assertEquals("Este correo ya está registrado", exception.getMessage());
         verify(userRepository, never()).save(any(User.class));
+    }
+
+    @Test
+    void execute_ShouldAssignClienteRole_WhenNoRoleProvided() {
+        RegisterUserDTO request = new RegisterUserDTO();
+        request.setName("John Doe");
+        request.setEmail("john@example.com");
+        request.setPassword("password123");
+        request.setRole(null); // sin rol
+
+        when(userRepository.findByEmail(request.getEmail())).thenReturn(Optional.empty());
+        when(passwordEncoder.encode(request.getPassword())).thenReturn("hashedPassword");
+
+        registerUser.execute(request);
+
+        verify(userRepository).save(argThat(user ->
+                user.getRole() == Role.CLIENTE
+        ));
+    }
+
+    @Test
+    void execute_ShouldAssignGerenteRole_WhenGerenteRoleProvided() {
+        RegisterUserDTO request = new RegisterUserDTO();
+        request.setName("Manager");
+        request.setEmail("manager@example.com");
+        request.setPassword("password123");
+        request.setRole(Role.GERENTE);
+
+        when(userRepository.findByEmail(request.getEmail())).thenReturn(Optional.empty());
+        when(passwordEncoder.encode(request.getPassword())).thenReturn("hashedPassword");
+
+        registerUser.execute(request);
+
+        verify(userRepository).save(argThat(user ->
+                user.getRole() == Role.GERENTE
+        ));
     }
 }
