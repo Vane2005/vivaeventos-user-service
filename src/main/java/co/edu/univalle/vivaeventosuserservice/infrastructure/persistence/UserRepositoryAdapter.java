@@ -1,6 +1,7 @@
 package co.edu.univalle.vivaeventosuserservice.infrastructure.persistence;
 
 
+import co.edu.univalle.vivaeventosuserservice.domain.model.Role;
 import co.edu.univalle.vivaeventosuserservice.domain.model.User;
 import co.edu.univalle.vivaeventosuserservice.domain.port.UserRepository;
 import org.springframework.stereotype.Component;
@@ -34,6 +35,7 @@ public class UserRepositoryAdapter implements UserRepository {
         user.setName(entity.getName());
         user.setEmail(entity.getEmail());
         user.setPassword(entity.getPassword());
+        user.setRole(entity.getRole());
         return user;
     }
 
@@ -43,6 +45,7 @@ public class UserRepositoryAdapter implements UserRepository {
         entity.setName(user.getName());
         entity.setEmail(user.getEmail());
         entity.setPassword(user.getPassword());
+        entity.setRole(user.getRole() != null ? user.getRole() : Role.CLIENTE);
         return entity;
     }
 }
