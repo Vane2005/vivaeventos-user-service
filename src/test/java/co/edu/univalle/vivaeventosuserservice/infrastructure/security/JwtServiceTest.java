@@ -1,5 +1,6 @@
 package co.edu.univalle.vivaeventosuserservice.infrastructure.security;
 
+import co.edu.univalle.vivaeventosuserservice.domain.model.Role;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;
@@ -26,7 +27,7 @@ class JwtServiceTest {
         String email = "test@example.com";
 
         // Act
-        String token = jwtService.generateToken(email);
+        String token = jwtService.generateToken(email, Role.CLIENTE);
 
         // Assert
         assertNotNull(token);
@@ -51,7 +52,7 @@ class JwtServiceTest {
         String email = "test@example.com";
 
         // Act
-        String token = jwtService.generateToken(email);
+        String token = jwtService.generateToken(email,  Role.CLIENTE);
 
         // Assert
         Claims claims = Jwts.parserBuilder()

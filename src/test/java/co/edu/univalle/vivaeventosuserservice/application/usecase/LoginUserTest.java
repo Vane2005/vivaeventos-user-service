@@ -46,10 +46,12 @@ class LoginUserTest {
         user.setId(1L);
         user.setEmail("john@example.com");
         user.setPassword("hashedPassword");
+        user.setRole(co.edu.univalle.vivaeventosuserservice.domain.model.Role.CLIENTE);
 
         when(userRepository.findByEmail(request.getEmail())).thenReturn(Optional.of(user));
         when(passwordEncoder.matches(request.getPassword(), user.getPassword())).thenReturn(true);
-        when(jwtService.generateToken(user.getEmail())).thenReturn("mockedToken");
+        when(jwtService.generateToken(user.getEmail(), user.getRole())).thenReturn("mockedToken");
+        when(jwtService.generateToken(user.getEmail(), user.getRole())).thenReturn("mockedToken");
 
         // Act
         LoginResponse response = loginUser.execute(request);
@@ -59,7 +61,7 @@ class LoginUserTest {
         assertEquals(1L, response.getUserId());
         verify(userRepository, times(1)).findByEmail(request.getEmail());
         verify(passwordEncoder, times(1)).matches(request.getPassword(), user.getPassword());
-        verify(jwtService, times(1)).generateToken(user.getEmail());
+        verify(jwtService, times(1)).generateToken(user.getEmail(), user.getRole());
     }
 
     @Test
