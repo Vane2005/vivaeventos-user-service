@@ -1,5 +1,6 @@
 package co.edu.univalle.vivaeventosuserservice.application.usecase;
 
+import co.edu.univalle.vivaeventosuserservice.domain.model.Role;
 import co.edu.univalle.vivaeventosuserservice.domain.model.User;
 import co.edu.univalle.vivaeventosuserservice.application.dto.RegisterUserDTO;
 import co.edu.univalle.vivaeventosuserservice.domain.port.UserRepository;
@@ -30,6 +31,7 @@ public class RegisterUser {
         user.setName(request.getName());
         user.setEmail(request.getEmail());
         user.setPassword(hashedPassword);
+        user.setRole(request.getRole() != null ? request.getRole() : Role.CLIENTE);
 
         userRepository.save(user);
     }

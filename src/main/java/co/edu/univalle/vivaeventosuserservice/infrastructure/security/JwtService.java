@@ -1,5 +1,7 @@
 package co.edu.univalle.vivaeventosuserservice.infrastructure.security;
 
+import co.edu.univalle.vivaeventosuserservice.domain.model.Role;
+
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;
 import java.security.Key;
@@ -20,9 +22,10 @@ public class JwtService {
         this.key = Keys.hmacShaKeyFor(secret.getBytes(StandardCharsets.UTF_8));
     }
 
-    public String generateToken(String email) {
+    public String generateToken(String email, Role role) {
         return Jwts.builder()
                 .setSubject(email)
+                .claim("role", role.name())
                 .setIssuedAt(new Date())
                 .setExpiration(new Date(System.currentTimeMillis() + 1000 * 60 * 60)) // 1 hour expiration
                 .signWith(key, SignatureAlgorithm.HS256)

@@ -29,6 +29,6 @@ public class LoginUser {
         if (!passwordEncoder.matches(request.getPassword(), user.getPassword())) {
             throw new RuntimeException("Contraseña incorrecta");
         }
-        return new LoginResponse(jwtService.generateToken(user.getEmail()), user.getId());
+        return new LoginResponse(jwtService.generateToken(user.getEmail(), user.getRole()), user.getId());
     }
 }
